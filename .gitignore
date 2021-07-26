@@ -1,5 +1,10 @@
 fonts
-markdown
+markdown/awesomecv
+markdown/hyndman
+markdown/latexcv
+markdown/markdowncv
+markdown/moderncv
+markdown/twentyseconds
 media
 output
 references

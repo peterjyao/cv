@@ -1,0 +1,40 @@
+```{r templatesetup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE, warning = FALSE, message = FALSE)
+library("vitae")
+library("here")
+
+data_dir <- "data"
+```
+
+# Work Experience
+
+```{r experience}
+experience <- read.csv(here::here(data_dir, "experience.csv"), quote = "\"")
+vitae::detailed_entries(experience, role, dates, org, place, description)
+```
+
+# Education
+
+```{r education}
+education <- read.csv(here::here(data_dir, "education.csv"), quote = "\"")
+vitae::detailed_entries(education, degree, dates, institution, place)
+```
+
+# Qualifications
+
+```{r qualifications, child=here::here(data_dir, "qualifications.Rmd")}
+```
+
+# Languages
+
+```{r languages, results='asis'}
+languages <- read.csv(here::here(data_dir, "languages.csv"), quote = "\"")
+languages$combined <- paste(languages$language, languages$level, sep = " : ")
+cat(paste(languages$combined, collapse = " / "))
+```
+
+# Publications
+
+```{r publications}
+vitae::bibliography_entries(here::here(data_dir, "bibliography.bib"))
+```
