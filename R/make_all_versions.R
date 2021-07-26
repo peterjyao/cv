@@ -1,5 +1,6 @@
 library("rmarkdown")
 library("here")
+library("vitae")
 
 source_dir <- list("R")
 markdown_dir <- list("markdown")
