@@ -1,12 +1,5 @@
 fonts
-markdown/awesomecv/*.Rmd
-markdown/hyndman/*.Rmd
-markdown/latexcv/*.Rmd
-markdown/markdowncv/*.Rmd
-markdown/moderncv/*.Rmd
-markdown/twentyseconds/*.Rmd
 media
-output
 references
 *.swp
 
